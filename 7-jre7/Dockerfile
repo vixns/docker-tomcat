@@ -1,4 +1,5 @@
 FROM tomcat:7-jre7
 MAINTAINER Stéphane Cottin <stephane.cottin@vixns.com>
-ADD run.sh /run.sh
+COPY run.sh /run.sh
+COPY server.xml /usr/local/tomcat/conf/server.xml
 CMD ["/run.sh"]
