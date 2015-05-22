@@ -35,5 +35,6 @@ RUN set -x \
 
 EXPOSE 8080
 MAINTAINER Stéphane Cottin <stephane.cottin@vixns.com>
-ADD run.sh /run.sh
+COPY run.sh /run.sh
+COPY server.xml /usr/local/tomcat/conf/server.xml
 CMD ["/run.sh"]
